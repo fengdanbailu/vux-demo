@@ -2,14 +2,14 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 16:26:35
+ * @LastEditTime: 2020-12-24 23:10:26
  * @Description: file content
- * @FilePath: /vux-demo/src/components/HelloFromVux.vue
+ * @FilePath: /vux-demo/src/views/test/HelloFromVux.vue
 -->
 <template>
   <div>
     <div class="vux-demo">
-      <img class="logo" src="../assets/vux_logo.png">
+      <img class="logo" src="@/assets/vux_logo.png">
       <h1> </h1>
     </div>
     <group title="家人">
@@ -32,12 +32,8 @@ export default {
     Group,
     Cell
   },
-  data () {
+  data() {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
       msg: 'Hello World!'
     }
   }

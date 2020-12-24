@@ -1,6 +1,14 @@
+<!--
+ * @Author: gm.chen
+ * @Date: 2020-12-24 16:11:16
+ * @LastEditors: gm.chen
+ * @LastEditTime: 2020-12-24 23:06:11
+ * @Description: file content
+ * @FilePath: /vux-demo/src/components/HelloWorld.vue
+-->
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1> 
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -23,9 +31,9 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App '
     }
   }
 }

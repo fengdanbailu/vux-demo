@@ -1,21 +1,17 @@
+/*
+ * @Author: gm.chen
+ * @Date: 2020-12-24 16:11:16
+ * @LastEditors: gm.chen
+ * @LastEditTime: 2020-12-24 22:00:23
+ * @Description: file content
+ * @FilePath: /vux-demo/src/main.js
+ */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import FastClick from 'fastclick'
-import VueRouter from 'vue-router'
-import App from './App'
-import Home from './components/HelloFromVux'
-
-Vue.use(VueRouter)
-
-const routes = [{
-  path: '/',
-  component: Home
-}]
-
-const router = new VueRouter({
-  routes
-})
+import App from '@/App'
+import router from '@/router'
 
 FastClick.attach(document.body)
 
