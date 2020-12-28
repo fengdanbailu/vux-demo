@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 23:19:20
+ * @LastEditTime: 2020-12-25 14:16:27
  * @Description: file content
  * @FilePath: /vux-demo/src/router/index.js
  */
@@ -13,6 +13,9 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    { path: '*', redirect: '/404', hidden: true },
+    { path: '/404', component: () => import('@/views/404.vue'), hidden: true },
+    { path: '/403', component: () => import('@/views/403.vue'), hidden: true },
     {
       path: '/',
       name: 'home',

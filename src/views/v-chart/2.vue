@@ -2,10 +2,11 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 23:16:35
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 23:21:44
+ * @LastEditTime: 2020-12-25 00:25:02
  * @Description: file content
  * @FilePath: /vux-demo/src/views/v-chart/2.vue
 -->
+
 <template>
   <div>
     <v-chart :data="data">
