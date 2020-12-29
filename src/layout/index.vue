@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 23:13:36
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-29 22:51:42
+ * @LastEditTime: 2020-12-29 23:49:33
  * @Description: file content
  * @FilePath: /vux-demo/src/layout/index.vue
 -->
@@ -23,20 +23,41 @@
     
       <!-- drawer content -->
       <div slot="drawer">
-        <group title="Drawer Demo" style="margin-top:20px">
-          <cell title="Demo" link="/helloWorld" value="演示" @click.native="drawerVisibility = false">
-          </cell>
-          <cell title="False Link" link="" @click.native="drawerVisibility = false">
-          </cell>
-          <cell title="baidu" link="http://www.baidu.com" value="Star me" @click.native="drawerVisibility = false">
-          </cell>
-        </group>
-        <group title="showMode">
-          <radio v-model="showMode" :options="['push', 'overlay']" @on-change="onShowModeChange"></radio>
-        </group>
-        <group title="placement">
-          <radio v-model="showPlacement" :options="['left', 'right']" @on-change="onPlacementChange"></radio>
-        </group>
+        <div>
+          <group title="目录" style="margin-top:20px">
+            <cell title="vux组件" link="/vux/index" value="详情" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="模仿微信" link="/wx/index" value="前往" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="关于我" link="/me/index" value="查看" @click.native="drawerVisibility = false">
+            </cell>
+          </group>
+          <group title="选择模式">
+            <radio v-model="showMode" :options="['push', 'overlay']" @on-change="onShowModeChange"></radio>
+          </group>
+          <group title="选择位置">
+            <radio v-model="showPlacement" :options="['left', 'right']" @on-change="onPlacementChange"></radio>
+          </group>
+          <group title="导航内目录">
+            <cell title="数据展示"   value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="图表"  value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="弹窗提示" value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="导航" value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="数据展示" value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="表单" value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="布局" value="" @click.native="drawerVisibility = false">
+            </cell>
+            <cell title="基本组件" value="" @click.native="drawerVisibility = false">
+            </cell>
+          </group>
+        </div>
+        
       </div>
 
       <!-- main content -->
@@ -102,8 +123,8 @@ import { Radio, Group, Cell, Badge, Drawer, Actionsheet, ButtonTab, ButtonTabIte
         'en': 'English'
       },
       drawerVisibility: false,
-      showMode: 'push',
-      showModeValue: 'push',
+      showMode: 'overlay',
+      showModeValue: 'overlay',
       showPlacement: 'left',
       showPlacementValue: 'left'
       

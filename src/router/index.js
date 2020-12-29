@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-29 22:54:14
+ * @LastEditTime: 2020-12-29 23:21:14
  * @Description: file content
  * @FilePath: /vux-demo/src/router/index.js
  */
@@ -23,7 +23,7 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      redirect: '/me/home'
+      redirect: '/me/index'
     },
     {
       path: '/redirect',
