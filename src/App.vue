@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 22:25:57
+ * @LastEditTime: 2020-12-29 19:19:11
  * @Description: file content
  * @FilePath: /vux-demo/src/App.vue
 -->

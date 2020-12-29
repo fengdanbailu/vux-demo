@@ -2,12 +2,12 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 23:13:36
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-28 23:42:59
+ * @LastEditTime: 2020-12-29 22:51:42
  * @Description: file content
- * @FilePath: /vux-demo/src/views/home/home.vue
+ * @FilePath: /vux-demo/src/layout/index.vue
 -->
 <template>
-  <div style="height:100%;">
+  <div :class="{fix:true}">
     <div v-transfer-dom>
       <loading v-model="isLoading"></loading>
     </div>
@@ -20,6 +20,7 @@
     :show-mode="showModeValue"
     :placement="showPlacementValue"
     :drawer-style="{'background-color':'#35495e', width: '200px'}">
+    
       <!-- drawer content -->
       <div slot="drawer">
         <group title="Drawer Demo" style="margin-top:20px">
@@ -53,7 +54,9 @@
             <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
           </span>
         </x-header>
-
+        <transition>
+          <router-view class="router-view"></router-view>
+        </transition>
         <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="isShowBar" slot="bottom">
           <tabbar-item :link="{path:'/home'}" :selected="true">
             <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2px;">&#xe637;</span>
@@ -113,8 +116,8 @@ import { Radio, Group, Cell, Badge, Drawer, Actionsheet, ButtonTab, ButtonTabIte
     leftOptions () {
       return {
         showBack: true,
-        backText:"Back",
-        preventGoBack:false,
+        // backText:"Back",
+        // preventGoBack:false,
       }
     },
     rightOptions () {
@@ -164,7 +167,13 @@ import { Radio, Group, Cell, Badge, Drawer, Actionsheet, ButtonTab, ButtonTabIte
 @import '~vux/src/styles/reset.less';
 @import '~vux/src/styles/1px.less';
 @import '~vux/src/styles/tap.less';
-
+.fix{
+  position :fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+}
 body {
   background-color: #fbf9fe;
 }
@@ -270,3 +279,5 @@ html, body {
   color: #888;
 }
  </style>  
+
+ 

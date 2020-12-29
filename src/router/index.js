@@ -2,43 +2,48 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-25 14:16:27
+ * @LastEditTime: 2020-12-29 22:54:14
  * @Description: file content
  * @FilePath: /vux-demo/src/router/index.js
  */
 import Vue from 'vue'
 import Router from 'vue-router'
+import Layout from '@/layout'
 
+import resumeRouter from './modules/myResume'
+import vuxRouter from './modules/vuxComponent'
+import wxUIRouter from './modules/wxUI'
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '*', redirect: '/404', hidden: true },
-    { path: '/404', component: () => import('@/views/404.vue'), hidden: true },
-    { path: '/403', component: () => import('@/views/403.vue'), hidden: true },
+    { path: '/401', component: () => import('@/views/error-page/401.vue') },
+    { path: '/403', component: () => import('@/views/error-page/403.vue') },
+    { path: '/404', component: () => import('@/views/error-page/404.vue') },
     {
       path: '/',
-      name: 'home',
-      component: () => import('@/views/home/home')
+      name: 'Index',
+      redirect: '/me/home'
     },
     {
-      path: '/helloWorld',
-      name: 'HelloWorld',
-      component: () => import('@/views/test/HelloWorld')
-    }, {
-      path: '/home',
-      name: 'Home',
-      component: () => import('@/views/test/HelloFromVux')
+      path: '/redirect',
+      component: Layout,
+      hidden: true,
+      children: [
+        {
+          path: '/redirect/:path(.*)',
+          component: () => import('@/views/redirect/index')
+        }
+      ]
     },
     {
-      path: '/v-chart/1',
-      name: '1',
-      component: () => import('@/views/v-chart/1')
+      path: '/login',
+      component: () => import('@/views/login/index'),
+      hidden: true
     },
-    {
-      path: '/v-chart/2',
-      name: '2',
-      component: () => import('@/views/v-chart/2')
-    }
+    resumeRouter,
+    vuxRouter,
+    wxUIRouter,
+    { path: '*', redirect: '/404' }
   ]
 })

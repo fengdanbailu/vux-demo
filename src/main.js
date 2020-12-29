@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 22:00:23
+ * @LastEditTime: 2020-12-29 00:18:11
  * @Description: file content
  * @FilePath: /vux-demo/src/main.js
  */
