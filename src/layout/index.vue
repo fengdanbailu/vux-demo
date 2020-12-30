@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 23:13:36
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-29 23:49:33
+ * @LastEditTime: 2020-12-30 23:53:04
  * @Description: file content
  * @FilePath: /vux-demo/src/layout/index.vue
 -->
@@ -25,11 +25,11 @@
       <div slot="drawer">
         <div>
           <group title="目录" style="margin-top:20px">
-            <cell title="vux组件" link="/vux/index" value="详情" @click.native="drawerVisibility = false">
+            <cell title="vux组件" :link="{path:'/vux/index'}" value="详情" @click.native="drawerVisibility = false">
             </cell>
-            <cell title="模仿微信" link="/wx/index" value="前往" @click.native="drawerVisibility = false">
+            <cell title="模仿微信" :link="{path:'/wx/index'}" value="前往" @click.native="drawerVisibility = false">
             </cell>
-            <cell title="关于我" link="/me/index" value="查看" @click.native="drawerVisibility = false">
+            <cell title="关于我" :link="{path:'/me/index'}" value="查看" @click.native="drawerVisibility = false">
             </cell>
           </group>
           <group title="选择模式">
@@ -38,24 +38,7 @@
           <group title="选择位置">
             <radio v-model="showPlacement" :options="['left', 'right']" @on-change="onPlacementChange"></radio>
           </group>
-          <group title="导航内目录">
-            <cell title="数据展示"   value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="图表"  value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="弹窗提示" value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="导航" value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="数据展示" value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="表单" value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="布局" value="" @click.native="drawerVisibility = false">
-            </cell>
-            <cell title="基本组件" value="" @click.native="drawerVisibility = false">
-            </cell>
-          </group>
+  
         </div>
         
       </div>
@@ -79,13 +62,17 @@
           <router-view class="router-view"></router-view>
         </transition>
         <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="isShowBar" slot="bottom">
-          <tabbar-item :link="{path:'/home'}" :selected="true">
+          <tabbar-item :link="{path:'/vux/index'}" :selected="true">
             <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2px;">&#xe637;</span>
-            <span slot="label">Home</span>
+            <span slot="label">目录</span>
           </tabbar-item>
-          <tabbar-item :link="{path:'/demo'}" :selected="false" badge="9">
+          <tabbar-item :link="{name:'vchart1'}" :selected="false">
+            <span class="demo-icon-22" slot="icon" style="position:relative;top: -2px;">&#xe636;</span>
+            <span slot="label">当前</span>
+          </tabbar-item>
+          <tabbar-item :link="{name:'vchart2'}" :selected="false" badge="9">
             <span class="demo-icon-22" slot="icon">&#xe633;</span>
-            <span slot="label"><span>Demos</span></span>
+            <span slot="label"><span>组合</span></span>
           </tabbar-item>
         </tabbar>
       </view-box>

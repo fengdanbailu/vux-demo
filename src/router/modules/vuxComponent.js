@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-29 20:22:29
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-29 23:24:19
+ * @LastEditTime: 2020-12-30 22:46:48
  * @Description: file content
  * @FilePath: /vux-demo/src/router/modules/vuxComponent.js
  */
@@ -16,7 +16,7 @@ const vuxComponentRouter = {
   children: [
     {
       path: 'index',
-      name: 'indexMe',
+      name: 'indexVux',
       component: () => import('@/views/vuxComponent')
     },
     {

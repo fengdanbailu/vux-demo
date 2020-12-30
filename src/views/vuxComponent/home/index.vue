@@ -2,9 +2,9 @@
  * @Author: gm.chen
  * @Date: 2020-12-24 16:11:16
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-24 23:10:26
+ * @LastEditTime: 2020-12-30 22:56:09
  * @Description: file content
- * @FilePath: /vux-demo/src/views/test/HelloFromVux.vue
+ * @FilePath: /vux-demo/src/views/vuxComponent/home/index.vue
 -->
 <template>
   <div>
@@ -12,6 +12,7 @@
       <img class="logo" src="@/assets/vux_logo.png">
       <h1> </h1>
     </div>
+    
     <group title="家人">
       <cell title="陈国明" value="男" is-link></cell>
       <cell title="张哈哈" value="女" is-link></cell>
