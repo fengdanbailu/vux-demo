@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-29 20:22:29
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-30 22:46:48
+ * @LastEditTime: 2021-01-01 23:02:16
  * @Description: file content
  * @FilePath: /vux-demo/src/router/modules/vuxComponent.js
  */
@@ -18,6 +18,21 @@ const vuxComponentRouter = {
       path: 'index',
       name: 'indexVux',
       component: () => import('@/views/vuxComponent')
+    },
+    {
+      path: 'basic/icon',
+      name: 'BasicIcon',
+      component: () => import('@/views/vuxComponent/basic/icon')
+    },
+    {
+      path: 'basic/x-button',
+      name: 'BasicXButton',
+      component: () => import('@/views/vuxComponent/basic/x-button')
+    },
+    {
+      path: 'basic/x-icon',
+      name: 'BasicXIcon',
+      component: () => import('@/views/vuxComponent/basic/x-icon')
     },
     {
       path: 'vchart/1',

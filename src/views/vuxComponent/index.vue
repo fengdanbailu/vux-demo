@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2020-12-25 14:15:01
  * @LastEditors: gm.chen
- * @LastEditTime: 2020-12-30 23:39:33
+ * @LastEditTime: 2021-01-01 23:03:20
  * @Description: file content
  * @FilePath: /vux-demo/src/views/vuxComponent/index.vue
 -->
@@ -13,9 +13,9 @@
       <h1> vux</h1>
     </div>
     <group title="基础组件">
-      <cell title="Icon组件" link=""  value="" is-link></cell>
-      <cell title="XButton组件"  link="" value="" is-link></cell>
-      <cell title="XIcon组件"  link="" value="" is-link></cell>
+      <cell title="Icon组件" link="/vux/basic/icon"  value="" is-link></cell>
+      <cell title="XButton组件"  link="/vux/basic/x-button" value="" is-link></cell>
+      <cell title="XIcon组件"  link="/vux/basic/x-icon" value="" is-link></cell>
     </group>
     <group title="表单">
       <cell title="Calendar组件" link=""  value="" is-link></cell>
