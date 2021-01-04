@@ -2,7 +2,7 @@
  * @Author: gm.chen
  * @Date: 2021-01-02 21:00:11
  * @LastEditors: gm.chen
- * @LastEditTime: 2021-01-03 00:26:50
+ * @LastEditTime: 2021-01-03 09:15:13
  * @Description: file content
  * @FilePath: /vux-demo/src/views/vuxComponent/basic/x-icon.vue
 -->
@@ -5859,8 +5859,6 @@
 
     </div>
     
-
-
   </div>
   
 </template>
@@ -5938,9 +5936,12 @@ export default {
   }
   .rect-layout-big{
       width:150px;
-      height:160px;
+      height:180px;
       float:left;
       text-align:center
      
+  }
+  .vux-x-icon {
+    fill: #F70968;
   }
 </style>
