@@ -1,6 +1,6 @@
 {
   "name": "myvue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "my vux demo",
   "author": "guoming chen <chenguoming2015@163.com>",
   "private": true,
@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "version": "node -v && npm -v && vue -V"
   },
   "dependencies": {
     "fastclick": "^1.0.6",
